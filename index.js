@@ -1,1 +1,12 @@
-console.log("hi");
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+function hanbleListening(){
+    console.log(`Example app listening at http://localhost:${port}`);
+}
+app.listen(port, hanbleListening);
